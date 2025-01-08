@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Arithmetic Problems{% endblock %}
+{% block content %}
+<h2>Solve Arithmetic Problem</h2>
+<form method="POST" action="">
+    <div class="mb-3">
+        <label class="form-label">Question:</label>
+        <div class="form-control" readonly>{{ question }}</div>
+    </div>
+    <div class="mb-3">
+        <label for="answer" class="form-label">Your Answer:</label>
+        <input type="text" name="answer" id="answer" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+{% endblock %}

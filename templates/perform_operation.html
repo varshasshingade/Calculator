@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation Result</title>
+</head>
+<body>
+    <h1>Operation: {{ num1 }} {{ operation_symbol }} {{ num2 }}</h1>
+    <h2>Result: {{ result }}</h2>
+    <a href="{{ url_for('select_operation') }}">Choose another operation</a>
+</body>
+</html>

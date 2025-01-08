@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations</title>
+</head>
+<body>
+    <h1>Arithmetic Operations</h1>
+    <p>Welcome, {{ session['username'] }}!</p>
+    <p>Number 1: {{ number1 }}</p>
+    <p>Number 2: {{ number2 }}</p>
+
+    <form method="post" action="{{ url_for('arithmetic') }}">
+        <label for="operation">Choose an operation:</label>
+        <select id="operation" name="operation">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select>
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result is not none %}
+        <h2>Result: {{ result }}</h2>
+    {% endif %}
+
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
